@@ -1,8 +1,8 @@
 // Copyright 2022 Moskvin Stanislav
 #include <vector>
 #include <random>
-#include "../../modules/task_1/moskvin_s_strassen/strassen.h"
 #include "gtest/gtest.h"
+#include "../../modules/task_1/moskvin_s_strassen/strassen.h"
 
 TEST(strassen_seq, correct_size) {
   int n = 64;
@@ -52,7 +52,7 @@ TEST(strassen_seq, correct_subt) {
     a[i] = gen() % 100 + 1;
     b[i] = gen() % 100 + 1;
 
-    c[i] = c[i] = a[i] - b[i];;
+    c[i] = a[i] - b[i];;
   }
   res = subtMatrix(a, b, n);
   ASSERT_TRUE(isEqMatrix(c, res, n));
@@ -97,6 +97,10 @@ TEST(strassen_seq, correct_split) {
 
   b22[0] = 10; b22[1] = 11;
   b22[2] = 14; b22[3] = 15;
+
+  for (int i = 0; i < n * n; i++) {
+    a[i] = i;
+  }
 
   splitMatrix(a, &a11, &a22, &a12, &a21, n);
   ASSERT_TRUE(isEqMatrix(b11, a11, m));

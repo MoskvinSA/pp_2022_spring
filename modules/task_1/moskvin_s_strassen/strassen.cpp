@@ -1,7 +1,7 @@
 // Copyright 2022 Moskvin Stanislav
-#include "../../modules/task_1/moskvin_s_strassen/strassen.h"
 #include <algorithm>
 #include <vector>
+#include "../../modules/task_1/moskvin_s_strassen/strassen.h"
 
 std::vector<double> sumMatrix(std::vector<double> a,
                                  std::vector<double> b, int n) {
@@ -98,8 +98,8 @@ std::vector<double> collectMatrix(std::vector<double> a11,
   return a;
 }
 
-std::vector<double> strassen(std::vector<double> a,
-                                 std::vector<double> b, int n) {
+std::vector<double> strassen(const std::vector<double> &a,
+                                 const std::vector<double> &b, int n) {
   if (n <= 2) {
     return multMatrix(a, b, n);
   }
