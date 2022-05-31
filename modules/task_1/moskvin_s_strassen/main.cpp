@@ -8,6 +8,7 @@ TEST(strassen_seq, correct_size) {
   int n = 64;
   int m = 50;
   int l = 31;
+
   ASSERT_EQ(checkSize(n), 64);
   ASSERT_EQ(checkSize(m), 64);
   ASSERT_EQ(checkSize(l), 32);
