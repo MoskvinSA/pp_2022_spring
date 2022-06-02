@@ -1,12 +1,6 @@
 // Copyright 2022 Moskvin Stanislav
 #include "../../modules/task_4/moskvin_s_strassen/strassen.h"
-#include <math.h>
-#include <algorithm>
-#include <mutex>
-#include <future>
-#include <thread>
-#include <vector>
-static int DEEP = 0;
+#include "../../../3rdparty/unapproved/unapproved.h"
 
 std::vector<double> sumMatrix(std::vector<double> a,
                                  std::vector<double> b, int n) {
@@ -164,6 +158,8 @@ void sum(const std::vector<double>& a, const std::vector<double>& b,
   std::vector<double>* c) {
   for (unsigned int i = 0; i < c->size(); i++) c->at(i) = a[i] + b[i];
 }
+
+static int DEEP = 0;
 
 void strassen_std(const std::vector<double>& a, const std::vector<double>& b,
   std::vector<double>* result) {

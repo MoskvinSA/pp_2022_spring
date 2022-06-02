@@ -1,6 +1,9 @@
 // Copyright 2022 Moskvin Stanislav
 #ifndef MODULES_TASK_4_MOSKVIN_S_STRASSEN_STRASSEN_H_
 #define MODULES_TASK_4_MOSKVIN_S_STRASSEN_STRASSEN_H_
+#include <algorithm>
+#include <cmath>
+#include <ctime>
 #include <vector>
 
 void splitMatrix(std::vector<double> a, std::vector<double> *a11,

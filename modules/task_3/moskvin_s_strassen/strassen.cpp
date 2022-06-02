@@ -182,7 +182,7 @@ void sum(const std::vector<double>& a, const std::vector<double>& b,
   for (unsigned int i = 0; i < c->size(); i++) c->at(i) = a[i] + b[i];
 }
 
-void strassen_tbb(const std::vector<double>& a, 
+void strassen_tbb(const std::vector<double>& a,
                      const std::vector<double>& b,
                      std::vector<double>* result) {
   int n = static_cast<int>(sqrt(a.size()));
